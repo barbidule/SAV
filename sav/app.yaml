@@ -1,0 +1,25 @@
+application: savduharcelement
+version: 1
+runtime: php
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: phoneicon.ico
+  upload: phoneicon\.ico
+
+- url: /
+  script: main.php
+
+- url: /text
+  script: scripts/sms.php
+
+- url: /voice
+  script: scripts/recording.php
+
+- url: /recordings
+  static_dir: scripts/recordings
+  
+- url: /messages
+  static_dir: messages
