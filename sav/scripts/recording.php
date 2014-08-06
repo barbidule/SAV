@@ -3,7 +3,7 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 
     /* NOTE: Replace YOUR_APPLICATION_NAME with the name of your application. */
-    $recordings_url = "http://adoutte.com/hdr/scripts/recordings/";
+    $recordings_url = "/sav/scripts/recordings/";
 
     /* Load the recordings JSON file */
     $file = "recordings.json";
@@ -25,10 +25,10 @@
       </block>
 	  <record name="recording" beep="true" dtmfterm="true" maxtime="100s">
       <catch event="connection.disconnect.hangup">
-           <submit next="http://adoutte.com/hdr/scripts/repondeur.php" method="post" namelist="recording callerid" enctype="multipart/form-data"/>
+           <submit next="/sav/scripts/repondeur.php" method="post" namelist="recording callerid" enctype="multipart/form-data"/>
       </catch>
 	  <filled>
-            <submit next="http://adoutte.com/hdr/scripts/repondeur.php" method="post" namelist="recording callerid" enctype="multipart/form-data"/>
+            <submit next="/sav/scripts/repondeur.php" method="post" namelist="recording callerid" enctype="multipart/form-data"/>
    </filled>
    </record>
    </form>

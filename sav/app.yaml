@@ -18,8 +18,11 @@ handlers:
 - url: /voice
   script: scripts/recording.php
 
+- url: /repondeur
+  script: scripts/repondeur.php
+
 - url: /recordings
   static_dir: scripts/recordings
-  
+
 - url: /messages
   static_dir: messages
